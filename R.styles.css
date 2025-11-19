@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <!-- แก้/เพิ่ม: meta viewport ตามข้อ 6 ในสไลด์ -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Responsive Design</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- เดิม: แค่ h1 ธรรมดา
+       แก้: เปลี่ยนให้แสดงเป็นรูป header.svg ตามไฟล์ที่ให้มา -->
+  <header class="header section">
+    <img src="images/header.svg" alt="header image">
+  </header>
+
+  <!-- เดิม: มีแค่ข้อความ Feature อันเดียว
+       แก้: เพิ่ม div.item 4 อัน เพื่อใช้จัด layout 1/2/4 คอลัมน์ -->
+  <section class="feature section">
+    <div class="item">Feature 1</div>  <!-- เพิ่ม -->
+    <div class="item">Feature 2</div>  <!-- เพิ่ม -->
+    <div class="item">Feature 3</div>  <!-- เพิ่ม -->
+    <div class="item">Feature 4</div>  <!-- เพิ่ม -->
+  </section>
+
+  <!-- เดิม: h1 Sign Up
+       แก้: ใช้รูป sign-up.svg ตามสไลด์ -->
+  <section class="sign-up section">
+    <img src="images/sign-up.svg" alt="sign up image">  <!-- เพิ่ม/แทนที่ -->
+  </section>
+
+  <!-- เดิม: h1 Content
+       แก้: ใช้รูป content.svg ตามสไลด์ -->
+  <section class="content section">
+    <img src="images/content.svg" alt="content image">  <!-- เพิ่ม/แทนที่ -->
+  </section>
+
+</body>
+</html>

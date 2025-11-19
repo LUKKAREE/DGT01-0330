@@ -1,0 +1,76 @@
+/* Reset (ส่วนนี้มีอยู่แล้วในสไลด์ หรือเพิ่มตามแนว reset) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* เดิม: ยังไม่มี max-width / margin auto
+   แก้: ใส่ให้ section อยู่กึ่งกลาง + จำกัดความกว้าง */
+.section {
+  padding: 40px;
+  text-align: center;
+  border: 1px solid #000;
+  font-size: 20px;
+
+  max-width: 1000px;   /* เพิ่มตามสไลด์ */
+  margin: 10px auto;   /* เพิ่มให้กึ่งกลาง */
+}
+
+/* เพิ่ม: base layout ของ feature + item (ใช้จัด layout ทุกโหมด) */
+.feature {
+  display: block;  /* base: 1 คอลัมน์ */
+}
+
+.feature .item {
+  background: white;
+  padding: 20px;
+  margin-bottom: 10px;
+  border: 2px dashed #666;
+  font-size: 20px;
+}
+
+/* เพิ่ม: media query สำหรับ mobile */
+@media only screen and (max-width: 400px) {
+  body {
+    background-color: red;  /* สีแดงตามสไลด์ */
+  }
+}
+
+/* เพิ่ม/แก้: media query สำหรับ tablet + layout 2x2 */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+
+  body {
+    background-color: yellow;  /* สีเหลืองตามสไลด์ */
+  }
+
+  /* เพิ่ม: จัด feature เป็น 2 คอลัมน์ (2x2) */
+  .feature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+
+  .feature .item {
+    margin-bottom: 0;   /* ลบช่องว่างล่าง เพราะใช้ grid แล้ว */
+  }
+}
+
+/* เพิ่ม/แก้: media query สำหรับ desktop + layout 4 คอลัมน์ */
+@media only screen and (min-width: 961px) {
+
+  body {
+    background-color: skyblue;  /* สีฟ้าตามสไลด์ */
+  }
+
+  /* เพิ่ม: จัด feature เป็น 4 คอลัมน์ใน 1 แถว */
+  .feature {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+  }
+
+  .feature .item {
+    margin-bottom: 0;
+  }
+}
